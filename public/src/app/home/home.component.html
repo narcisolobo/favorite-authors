@@ -1,0 +1,19 @@
+<div class="text-center">
+  <div style="overflow: auto;">
+    <table class="table table-bordered table-light table-hover text-left">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" class="text-center">Author Name</th>
+          <th scope="col" class="text-center">Actions Available</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let author of authors">
+        <td class="text-center">{{ author.name }}</td>
+        <td class="text-center">
+          <a href="/edit/{{ author._id }}" class="btn btn-primary mr-3">EDIT</a>
+          <a (click)="deleteAuthor(author._id)" class="btn btn-danger text-white">DELETE</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

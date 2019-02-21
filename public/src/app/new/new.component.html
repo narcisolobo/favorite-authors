@@ -1,0 +1,12 @@
+<form class="p-3 m-3 border rounded">
+  <h5>ADD A NEW AUTHOR:</h5>
+  <div class="form-group">
+    <label for="newAuthor.name">Name:</label>
+    <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name" class="form-control">
+    <small class="text-danger">{{ errors }}</small>
+  </div>
+  <div class="text-right">
+    <a href="/" class="btn btn-secondary mr-3" role="button">CANCEL</a>
+    <button (click)="createAuthor(newAuthor)" class="btn btn-primary">SUBMIT</button>
+  </div>
+</form>
